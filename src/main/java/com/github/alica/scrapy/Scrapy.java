@@ -1,9 +1,11 @@
 package com.github.alica.scrapy;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.StringTokenizer;
 
 public class Scrapy {
     public class Page{
@@ -23,7 +25,6 @@ public class Scrapy {
     }
     private ArrayList<String> listUrls;
     private final String symbols = " ,./?;:!-`()\'\"1234567890";
-    private final Pattern regex = Pattern.compile("<script.*?</script>|<p.*?</p>|<.*?>", Pattern.DOTALL);
     private long t0;
     public ArrayList<Page> webpages;
 
@@ -85,13 +86,13 @@ public class Scrapy {
                 System.exit(1);
             }
         }
+        System.exit(1);
         return null;
     }
 
     private String textParser(StringBuffer buffer){
-        Matcher match = regex.matcher(buffer.toString());
-        String result = match.replaceAll("");
-        return result.replaceAll("[\\s]{2,}", " ");
+        Document doc = Jsoup.parse(buffer.toString());
+        return doc.body().text();
     }
 
     public final void run(){
@@ -104,19 +105,15 @@ public class Scrapy {
         return System.currentTimeMillis() - t0;
     }
 
-    public int wordCount(String word, String page){
-        String str;
-        int wordcount = 0;
-        int position = 0;
-        while (page.indexOf(word, position) != -1){
-            str = "";
-            position = (page.toLowerCase()).indexOf(word.toLowerCase(), position);
-            if (position > 0) str += page.charAt(position - 1);
-            if (position + word.length() < page.length()) str += page.charAt(position + word.length());
-            if(str.length() == 1 && symbols.contains(str)) wordcount++;
-            if(str.length() == 2 && symbols.contains("" + str.charAt(0))&& symbols.contains("" + str.charAt(1))) wordcount++;
-            position += word.length();
+    public int[] wordCount(ArrayList<String> listWords, String htmlText){
+        int[] wordCount = new int[listWords.size()];
+        for (int i = 0; i < wordCount.length; i++) wordCount[i] = 0;
+        StringTokenizer st = new StringTokenizer(htmlText);
+        while (st.hasMoreTokens()) {
+            for (int i = 0; i < listWords.size(); i++)
+                if(st.nextToken().equals(listWords.get(i)))
+                    wordCount[i] += 1;
         }
-        return wordcount;
+        return wordCount;
     }
 }

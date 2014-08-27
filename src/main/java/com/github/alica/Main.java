@@ -1,7 +1,7 @@
 package com.github.alica;
 
 import com.github.alica.scrapy.Scrapy;
-import com.github.alica.scrapy.Switch;
+import com.github.alica.scrapy.command.Switch;
 import com.github.alica.scrapy.command.CommandV;
 import com.github.alica.scrapy.command.CommandW;
 import com.github.alica.scrapy.command.util.CommandWithParameter;
@@ -10,9 +10,6 @@ import com.github.alica.scrapy.command.util.CommandWithoutParameter;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- * Created by root on 27.08.14.
- */
 public class Main {
     public static void main(String[]args){
         ArrayList<String> listWords = new ArrayList<String>();

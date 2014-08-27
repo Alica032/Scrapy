@@ -14,11 +14,13 @@ public class CommandW implements CommandWithParameter{
 
     @Override
     public void execute(ArrayList<String> listWords) {
-
+        int[] wordCount;
         for(Scrapy.Page page: scrapy.webpages){
             System.out.println(page.getUrl() + ':');
-            for (String word: listWords){
-                    System.out.println(word + ": " + scrapy.wordCount(word, page.getWebpage()));
+            wordCount = scrapy.wordCount(listWords, page.getWebpage());
+            for (int i = 0; i < listWords.size(); i++)
+            {
+                    System.out.println(listWords.get(i) + ": " + wordCount[i]);
                 }
                 System.out.println();
             }
