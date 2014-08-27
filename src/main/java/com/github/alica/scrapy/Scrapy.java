@@ -23,7 +23,7 @@ public class Scrapy {
     }
     private ArrayList<String> listUrls;
     private final String symbols = " ,./?;:!-`()\'\"1234567890";
-    private final Pattern regex = Pattern.compile("<script.*?</script>|<p.*?</p>|<.*?>", Pattern.DOTALL);
+    private final Pattern regex = Pattern.compile("<script.*?</script>|\\<.*?\\>", Pattern.DOTALL);
     private long t0;
     public ArrayList<Page> webpages;
 
