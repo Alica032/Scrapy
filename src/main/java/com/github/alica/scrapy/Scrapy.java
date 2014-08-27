@@ -54,7 +54,6 @@ public class Scrapy {
     }
 
     public static Scrapy readUrl(String url){
-
         return new Scrapy(url);
     }
 
@@ -120,77 +119,4 @@ public class Scrapy {
         }
         return wordcount;
     }
-
-/*
-    public Pattern pattern(ArrayList<String> words){
-        String str = "([A-Z][^.?!]*?)?(?<!\\w)(?i)(";
-        for (String word: words){
-            str = str + word + '|';
-        }
-        str = str.substring(0, str.length()-1) + ")(?!\\w)[^.?!]*?[.?!]{1,2}\"?";
-        return Pattern.compile(str);
-    }
-
-    private void commands(){
-        pattern();
-        for(Page page: webpage){
-            System.out.println(page.url + ':');
-            if(flags[1]){
-                for (String word: words){
-                    System.out.println(word + ": " + wordCount(word, page.webpage));
-                }
-                System.out.println();
-            }
-            if(flags[2]) {
-                System.out.println("number of characterisics " + characterCount(page.webpage));
-                System.out.println();
-            }
-            if(flags[3]) sentence(page.webpage);
-        }
-        if(flags[0]) System.out.print("Time spend on data scraping and data processing:" + time());
-    }
-
-    private long time(){
-        return System.currentTimeMillis() - t0;
-    }
-
-
-
-    private int wordCount(String word, String page){
-        String str;
-        wordcount = 0;
-        position = 0;
-        while (page.indexOf(word, position) != -1){
-            str = "";
-            position = (page.toLowerCase()).indexOf(word.toLowerCase(), position);
-            if (position > 0) str += page.charAt(position - 1);
-            if (position + word.length() < page.length()) str += page.charAt(position + word.length());
-            if(str.length() == 1 && symbols.contains(str)) wordcount++;
-            if(str.length() == 2 && symbols.contains("" + str.charAt(0))&& symbols.contains("" + str.charAt(1))) wordcount++;
-            position += word.length();
-        }
-        return wordcount;
-    }
-
-    private int characterCount(String page){
-        return page.length();
-    }
-
-    private void pattern(){
-        String str = "([A-Z][^.?!]*?)?(?<!\\w)(?i)(";
-        for (String word: words){
-            str = str + word + '|';
-        }
-        str = str.substring(0, str.length()-1) + ")(?!\\w)[^.?!]*?[.?!]{1,2}\"?";
-        pattern = Pattern.compile(str);
-    }
-
-    private void sentence(String page){
-        Matcher m = pattern.matcher(page);
-        while (m.find()) {
-            System.out.println(m.group());
-        }
-        System.out.println();
-    }
-*/
 }
