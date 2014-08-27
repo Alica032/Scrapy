@@ -25,7 +25,6 @@ public class Scrapy {
 
     }
     private ArrayList<String> listUrls;
-    private final String symbols = " ,./?;:!-`()\'\"1234567890";
     private long t0;
     public ArrayList<Page> webpages;
 
