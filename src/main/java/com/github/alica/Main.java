@@ -1,30 +1,29 @@
 package com.github.alica;
-import com.github.alica.Scrapy.Scrapy;
+
+import com.github.alica.scrapy.Scrapy;
+import com.github.alica.scrapy.Switch;
+import com.github.alica.scrapy.command.CommandV;
+import com.github.alica.scrapy.command.CommandW;
+import com.github.alica.scrapy.command.util.CommandWithParameter;
+import com.github.alica.scrapy.command.util.CommandWithoutParameter;
 
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * Created by root on 27.08.14.
+ */
 public class Main {
-    private static boolean[] flags = { false,  false, false, false };
-    private void parser(String s){
-    }
-
-    public void run(){
-        //Scanner scanner = new Scanner(System.in);
-        //String command = scanner.nextLine();
-    }
-
     public static void main(String[]args){
-        ArrayList<String> listwords = new ArrayList<String>();
-        listwords.add("cat");
-        listwords.add("dog");
-        flags[1] = true;
-        flags[0] = true;
-        flags[2] = true;
-        flags[3] = true;
-        //Scrapy scrapy = new Scrapy("http://www.businessinsider.com/cat-and-dog-ownership-maps-2014-7", listwords, flags);
-        File fileURL = new File("src/main/resources/list_urls.txt");
-        new  Scrapy(fileURL, listwords, flags);
-
+        ArrayList<String> listWords = new ArrayList<String>();
+        listWords.add("dog");
+        listWords.add("cat");
+        Scrapy scrapy = Scrapy.readUrlsFile(new File("src/main/resources/list_urls.txt"));
+        CommandWithoutParameter commandV = new CommandV(scrapy);
+        CommandWithParameter commandW = new CommandW(scrapy);
+        Switch s = new Switch(commandV, commandW);
+        scrapy.run();
+        s.w(listWords);
+        s.v();
     }
 }
