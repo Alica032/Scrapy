@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/github/alica/scrapy/Scrapy.java" line="56" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/github/alica/scrapy/Scrapy.java" line="55" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ac2a832-2e96-42e1-b435-b7281a8250f1" name="Default" comment="" />
@@ -49,11 +49,10 @@
       <file leaf-file-name="Scrapy.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/alica/scrapy/Scrapy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49014086" vertical-offset="744" max-vertical-offset="1422">
-              <caret line="87" column="9" selection-start-line="87" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45633802" vertical-offset="72" max-vertical-offset="1602">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
                 <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
                 <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
                 <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -552,8 +551,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1368" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="-1" y="25" width="1368" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -572,7 +571,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16983895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41321045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41321045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -711,7 +710,6 @@
           <caret line="25" column="52" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -770,7 +768,6 @@
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -821,7 +818,6 @@
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -872,7 +868,6 @@
           <caret line="200" column="1" selection-start-line="200" selection-start-column="1" selection-end-line="200" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -889,7 +884,6 @@
           <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -906,7 +900,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -923,7 +916,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -940,7 +932,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
@@ -1049,11 +1040,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/alica/scrapy/Scrapy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49014086" vertical-offset="744" max-vertical-offset="1422">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.45633802" vertical-offset="72" max-vertical-offset="1602">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Page#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#0;class#Scrapy#0" expanded="false" />
             <element signature="method#Scrapy#1;class#Scrapy#0" expanded="false" />
             <element signature="method#readUrlsFile#0;class#Scrapy#0" expanded="false" />
