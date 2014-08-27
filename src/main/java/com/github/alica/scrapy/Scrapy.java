@@ -1,11 +1,12 @@
 package com.github.alica.scrapy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Scrapy {
     public class Page{
@@ -110,10 +111,36 @@ public class Scrapy {
         for (int i = 0; i < wordCount.length; i++) wordCount[i] = 0;
         StringTokenizer st = new StringTokenizer(htmlText);
         while (st.hasMoreTokens()) {
+            final String token = st.nextToken();
             for (int i = 0; i < listWords.size(); i++)
-                if(st.nextToken().equals(listWords.get(i)))
+                if(token.equals(listWords.get(i)))
                     wordCount[i] += 1;
         }
         return wordCount;
+    }
+
+    private boolean findWords(String sentence, ArrayList<String> listWords){
+        StringTokenizer st = new StringTokenizer(sentence);
+        while (st.hasMoreTokens()) {
+            final String token = st.nextToken();
+            if(listWords.contains(token)) return true;
+        }
+        return false;
+    }
+
+    public void findSentenceContainWords(String page, ArrayList<String>listWords){
+        String code_pattern = "\\s//:((//:~){0}|.|\\s)*//:~\\s";
+        String string = page.replaceAll(code_pattern, "");
+        System.out.println(string);
+        Pattern p = Pattern.compile("(^|(?<=[.!?]\\s))(\\d+\\.\\s?)*[А-ЯA-Z][^!?]*?[.!?](?=\\s*(\\d+\\.\\s)*[А-ЯA-Z]|$)", Pattern.MULTILINE);
+        Matcher m = p.matcher(string);
+        while (m.find()) {
+            if (findWords(m.group(), listWords))
+                System.out.println(m.group());
+        }
+    }
+
+    public int characterCount(String page){
+        return page.length();
     }
 }
