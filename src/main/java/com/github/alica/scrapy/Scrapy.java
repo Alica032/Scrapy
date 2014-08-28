@@ -25,7 +25,6 @@ public class Scrapy {
 
     }
     private ArrayList<String> listUrls;
-    private final String symbols = " ,./?;:!-`()\'\"1234567890";
     private long t0;
     public ArrayList<Page> webpages;
 
@@ -106,29 +105,30 @@ public class Scrapy {
         return System.currentTimeMillis() - t0;
     }
 
-    public int[] wordCount(ArrayList<String> listWords, String htmlText){
-        int[] wordCount = new int[listWords.size()];
+    public int[] wordCount(String[] listWords, String htmlText){
+        int[] wordCount = new int[listWords.length];
         for (int i = 0; i < wordCount.length; i++) wordCount[i] = 0;
         StringTokenizer st = new StringTokenizer(htmlText);
         while (st.hasMoreTokens()) {
             final String token = st.nextToken();
-            for (int i = 0; i < listWords.size(); i++)
-                if(token.equals(listWords.get(i)))
+            for (int i = 0; i < listWords.length; i++)
+                if(token.equals(listWords[i]))
                     wordCount[i] += 1;
         }
         return wordCount;
     }
 
-    private boolean findWords(String sentence, ArrayList<String> listWords){
+    private boolean findWords(String sentence, String[] listWords){
         StringTokenizer st = new StringTokenizer(sentence);
         while (st.hasMoreTokens()) {
             final String token = st.nextToken();
-            if(listWords.contains(token)) return true;
+            for (String str: listWords)
+                if(token.equals(str)) return true;
         }
         return false;
     }
 
-    public void findSentenceContainWords(String page, ArrayList<String>listWords){
+    public void findSentenceContainWords(String page, String[] listWords){
         String code_pattern = "\\s//:((//:~){0}|.|\\s)*//:~\\s";
         String string = page.replaceAll(code_pattern, "");
         System.out.println(string);

@@ -1,8 +1,7 @@
 package com.github.alica.scrapy.command;
-
 import com.github.alica.scrapy.command.util.CommandWithParameter;
 import com.github.alica.scrapy.command.util.CommandWithoutParameter;
-import java.util.ArrayList;
+
 
 public class Switch {
     private CommandWithoutParameter commandV;
@@ -24,11 +23,11 @@ public class Switch {
         commandC.execute();
     }
 
-    public void w(ArrayList<String> listWord){
+    public void w(String[] listWord){
         commandW.execute(listWord);
     }
 
-    public void e(ArrayList<String> listWord){
+    public void e(String[] listWord){
         commandE.execute(listWord);
     }
 }

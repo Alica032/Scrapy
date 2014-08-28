@@ -3,8 +3,6 @@ package com.github.alica.scrapy.command;
 import com.github.alica.scrapy.Scrapy;
 import com.github.alica.scrapy.command.util.CommandWithParameter;
 
-import java.util.ArrayList;
-
 public class CommandE implements CommandWithParameter{
     private Scrapy scrapy;
 
@@ -13,7 +11,7 @@ public class CommandE implements CommandWithParameter{
     }
 
     @Override
-    public void execute(ArrayList<String> listWords) {
+    public void execute(String[] listWords) {
         for(Scrapy.Page page: scrapy.webpages){
             System.out.println(page.getUrl() + ':');
             scrapy.findSentenceContainWords(page.getWebpage(), listWords);
