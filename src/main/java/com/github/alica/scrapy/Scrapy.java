@@ -2,7 +2,6 @@ package com.github.alica.scrapy;
 import com.github.alica.scrapy.command.util.Command;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;

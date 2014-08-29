@@ -1,5 +1,4 @@
 package com.github.alica;
-
 import com.github.alica.scrapy.Scrapy;
 import com.github.alica.scrapy.command.CommandC;
 import com.github.alica.scrapy.command.CommandE;
@@ -8,9 +7,7 @@ import com.github.alica.scrapy.command.util.Command;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class Main {
@@ -27,25 +24,20 @@ public class Main {
         if (matcher.matches()) scrapy = Scrapy.readUrl(args[0], listWords);
         else scrapy= Scrapy.readUrlsFile(new File(args[0]), listWords);
         boolean time = false;
-        Set<String> commandSet = new HashSet<String>();
-        commandSet.add("-c");
-        commandSet.add("-w");
-        commandSet.add("-v");
-        commandSet.add("-e");
         Command commandC = new CommandC(scrapy);
         Command commandW = new CommandW(scrapy);
         Command commandE = new CommandE(scrapy);
         List<Command> commands = new ArrayList<Command>(3);
         for (int i = 2; i < args.length; i++)
         {
-            if (!commandSet.contains(args[i])){
-                System.out.print("Uncorrect commands");
-                return;
-            }
             if(args[i].equals( "-v")) time = true;
             else if(args[i].equals( "-c") && !commands.contains(commandC)) commands.add(commandC);
             else if(args[i].equals( "-w") && !commands.contains(commandW)) commands.add(commandW);
             else if(args[i].equals( "-e") && !commands.contains(commandE)) commands.add(commandE);
+            else{
+                System.out.print("Uncorrect commands");
+                System.exit(1);
+            }
         }
         scrapy.run(commands, time);
     }
