@@ -4,7 +4,6 @@ import com.github.alica.scrapy.command.CommandC;
 import com.github.alica.scrapy.command.CommandE;
 import com.github.alica.scrapy.command.CommandW;
 import com.github.alica.scrapy.command.util.Command;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
