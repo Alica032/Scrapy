@@ -4,7 +4,7 @@ import com.github.alica.scrapy.command.util.Command;
 
 import java.util.StringTokenizer;
 public class CommandW implements Command {
-    private String[] listWords;
+    private final String[] listWords;
     public CommandW(String[] listWords){
         this.listWords = listWords;
     }

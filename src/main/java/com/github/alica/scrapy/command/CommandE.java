@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class CommandE implements Command {
-    private String[] listWords;
+    private final String[] listWords;
     public CommandE(String[] listWords){
         this.listWords = listWords;
     }
