@@ -69,10 +69,11 @@ public class Scrapy {
         return doc.body().text();
     }
     public final void run(List<Command> listCommand, boolean time){
+        Page page;
         for (String url: listUrls){
             System.out.println(url + ':');
             t0 = System.currentTimeMillis();
-            Page page = downloadWebPage(url);
+            page = downloadWebPage(url);
             if (time) System.out.println("Time spend on data scraping: " + time());
             t0 = System.currentTimeMillis();
             for (Command command: listCommand)
