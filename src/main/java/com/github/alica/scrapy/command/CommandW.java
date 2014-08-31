@@ -1,7 +1,6 @@
 package com.github.alica.scrapy.command;
 import com.github.alica.scrapy.Page;
 import com.github.alica.scrapy.command.util.Command;
-
 import java.util.StringTokenizer;
 public class CommandW implements Command {
     private final String[] listWords;
