@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 public class Scrapy {
-    private ArrayList<String> listUrls;
+    private final ArrayList<String> listUrls;
     private long t0;
     private Scrapy(ArrayList<String> listUrls){
         this.listUrls = listUrls;
