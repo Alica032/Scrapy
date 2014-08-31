@@ -4,7 +4,6 @@ import com.github.alica.scrapy.command.CommandC;
 import com.github.alica.scrapy.command.CommandE;
 import com.github.alica.scrapy.command.CommandW;
 import com.github.alica.scrapy.command.util.Command;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +20,12 @@ public class Main {
         Scrapy scrapy;
         Matcher matcher = patternUrl.matcher(args[0]);
         String[] listWords = args[1].split(",");
-        if (matcher.matches()) scrapy = Scrapy.readUrl(args[0], listWords);
-        else scrapy= Scrapy.readUrlsFile(new File(args[0]), listWords);
+        if (matcher.matches()) scrapy = Scrapy.readUrl(args[0]);
+        else scrapy= Scrapy.readUrlsFile(new File(args[0]));
         boolean time = false;
-        Command commandC = new CommandC(scrapy);
-        Command commandW = new CommandW(scrapy);
-        Command commandE = new CommandE(scrapy);
+        Command commandC = new CommandC();
+        Command commandW = new CommandW(listWords);
+        Command commandE = new CommandE(listWords);
         List<Command> commands = new ArrayList<Command>(3);
         for (int i = 2; i < args.length; i++)
         {
