@@ -1,7 +1,7 @@
 package com.github.alica.scrapy;
 public class Page{
-    String final url;
-    String final webpage;
+    String url;
+    String webpage;
     Page(String url, String webpage){
         this.url = url;
         this.webpage = webpage;
